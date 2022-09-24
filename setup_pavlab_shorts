@@ -1,0 +1,6 @@
+#RUN WITH SOURCE
+
+#$ source setup_pavlab_shorts
+path_ps="$HOME/pavlab_shorts"
+eval "source $path_ps/herons/setup_herons"
+eval "source $path_ps/sailbot/setup_sailbot"

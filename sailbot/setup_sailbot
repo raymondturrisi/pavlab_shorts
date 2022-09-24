@@ -6,7 +6,7 @@
 # Connectivity based utilities and general utilities are separated, and each extend your path variable
 # By running this alone, you will have access to all the utilities
 #
-_path="$HOME/pavlab_shorts/herons/"
+_path="$HOME/pavlab_shorts/sailbot/"
 for subdir in $_path* ; do
     [ -d "${subdir%/}" ] || continue
     export PATH=$PATH:"$subdir"
