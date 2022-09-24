@@ -1,0 +1,15 @@
+#!/bin/bash
+
+hcpu_ip_list=(`echo $HERONS_CPUS | tr ',' ' '`)
+hcpu_name_list=(`echo $HERONS_CPUS_N | tr ',' ' '`)
+len=${#hcpu_ip_list[@]}
+for (( idx=0; idx<$len; idx++ ));
+do
+    cpu_ip="${hcpu_ip_list[idx]}"
+    cpu_name="${hcpu_name_list[idx]}"
+    if nc -z -G 1 $cpu_ip 22 &>/dev/null; then
+        echo "${cpu_name} ONLINE"
+    else
+        echo "${cpu_name} OFFLINE"
+    fi
+done 
