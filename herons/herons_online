@@ -6,7 +6,53 @@ _R='\033[0;31m'
 hcpu_ip_list=(`echo $HERONS_CPUS | tr ',' ' '`)
 hcpu_name_list=(`echo $HERONS_CPUS_N | tr ',' ' '`)
 len=${#hcpu_ip_list[@]}
-for (( idx=0; idx<$len; idx++ ));
+range=''
+if [[ $# == 0 ]]
+then
+    for i in $(seq 0 $(($len-1)))
+    do 
+        range+="${i} "
+    done 
+else
+    for vehicle in "$@";
+    do
+        case $vehicle in 
+
+        a | A) 
+        range+='0 1 '
+        ;;
+        b | B) 
+        range+='2 3 '
+        ;;
+        c | C) 
+        range+='4 5 '
+        ;;
+        d | D) 
+        range+='6 7 '
+        ;;
+        e | E) 
+        range+='8 9 '
+        ;;
+        f | F) 
+        range+='10 11 '
+        ;;
+        g | G) 
+        range+=''
+        ;;
+        m | M) 
+        range+='12 13 '
+        ;;
+        n | N) 
+        range+='14 15 '
+        ;;
+        o | O) 
+        range+='16 17 '
+        ;;
+        esac
+    done
+fi
+
+for idx in ${range};
 do
     cpu_ip="${hcpu_ip_list[idx]}"
     cpu_name="${hcpu_name_list[idx]}"
