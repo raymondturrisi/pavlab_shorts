@@ -12,8 +12,8 @@ eval "$HOME/setup_pavlab_shorts"$
 `
 Which adds everything, or you can add a specific folder which is related to your project. 
 
-`...
-
+```
+...
 eval "$HOME/pavlab_shorts/herons/setup_herons"$
-`
+```
 
