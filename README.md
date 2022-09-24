@@ -6,7 +6,13 @@
 
 Herein I am adding my general utilities for managing the vehicles in the lab. This includes sailbot utilities, and heron utilities. More to come, probably relating to cluster management and slurm jobs for HPC clusters. 
 
-### Herons setup
-Currently, all you have to do is run: 
-`$ source setup_herons`
-To first extend your path appropriately, and then export the environment variables which all other scripts and utilities depend on. For distributing SSH keys, you must modify in place the path for your sshpass binary since it varies between operating systems and isn't totally kosher (brew dislikes).
+Place this repo in your $HOME directory for script assumptions to work appropriately. Within or ~/.zshrc or ~/.bashrc you can add a line such as:
+`...
+eval "$HOME/setup_pavlab_shorts"$
+`
+Which adds everything, or you can add a specific folder which is related to your project. 
+
+`...
+eval "$HOME/pavlab_shorts/herons/setup_herons"$
+`
+

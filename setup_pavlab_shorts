@@ -1,5 +1,5 @@
 #RUN WITH SOURCE
-
+#This script configures all the vehicle utilities
 #$ source setup_pavlab_shorts
 path_ps="$HOME/pavlab_shorts"
 eval "source $path_ps/herons/setup_herons"

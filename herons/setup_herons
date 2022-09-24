@@ -7,9 +7,5 @@
 # By running this alone, you will have access to all the utilities
 #
 _path="$HOME/pavlab_shorts/herons/"
-for subdir in $_path* ; do
-    [ -d "${subdir%/}" ] || continue
-    export PATH=$PATH:"$subdir"
-done
-
+export PATH="$PATH:$_path"
 
