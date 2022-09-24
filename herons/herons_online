@@ -1,4 +1,7 @@
 #!/bin/bash
+_NC='\033[0m' 
+_G='\033[0;32m' 
+_R='\033[0;31m' 
 
 hcpu_ip_list=(`echo $HERONS_CPUS | tr ',' ' '`)
 hcpu_name_list=(`echo $HERONS_CPUS_N | tr ',' ' '`)
@@ -8,8 +11,8 @@ do
     cpu_ip="${hcpu_ip_list[idx]}"
     cpu_name="${hcpu_name_list[idx]}"
     if nc -z -G 1 $cpu_ip 22 &>/dev/null; then
-        echo "${cpu_name} ONLINE"
+        printf "${cpu_name} ${_G}ONLINE${_NC}\n"
     else
-        echo "${cpu_name} OFFLINE"
+        printf "${cpu_name} ${_R}OFFLINE${_NC}\n"
     fi
 done 

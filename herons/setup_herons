@@ -8,4 +8,4 @@
 #
 _path="$HOME/pavlab_shorts/herons/"
 export PATH="$PATH:$_path"
-
+source herons_set_vars
