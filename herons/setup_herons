@@ -6,6 +6,6 @@
 # Connectivity based utilities and general utilities are separated, and each extend your path variable
 # By running this alone, you will have access to all the utilities
 #
-_path="$HOME/pavlab_shorts/herons/"
+_path="$path_ps/herons/"
 export PATH="$PATH:$_path"
 source herons_set_vars

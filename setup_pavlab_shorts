@@ -1,6 +1,6 @@
 #RUN WITH SOURCE
 #This script configures all the vehicle utilities
 #$ source setup_pavlab_shorts
-path_ps="$HOME/pavlab_shorts"
+# Expected that you have a variable named path_ps which points to the pavlab_shorts repo root i.e. $HOME/pavlab_shorts or $HOME/Documents/pavlab_shorts
 eval "source $path_ps/herons/setup_herons"
 eval "source $path_ps/sailbot/setup_sailbot"
